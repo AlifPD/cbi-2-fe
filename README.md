@@ -13,13 +13,10 @@ App ini merupakan Simple To Do list.
 |Update item|Mengubah item untuk menandakan item done|
 |Delete item|Menghapus item pada To do list|
 
-## How to Run?
-
-Prerequisite:
+## Prerequisite
 - Node JS
 
-
-### Create files and folders
+## How to Run
 
 1. Add ``` .env ``` file in the project's root folder
 ```
