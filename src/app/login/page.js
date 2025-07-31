@@ -1,4 +1,3 @@
-// src/app/login/page.js
 'use client';
 import { useState } from 'react';
 import { login } from '@/lib/api';
@@ -20,11 +19,26 @@ export default function LoginPage() {
     };
 
     return (
-        <form onSubmit={handleLogin}>
-            <h2>Login</h2>
-            <input placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} />
-            <input placeholder="Password" type="password" value={password} onChange={e => setPassword(e.target.value)} />
-            <button type="submit">Login</button>
-        </form>
+        <div className="container mt-5">
+            <div className="row justify-content-center">
+                <div className="col-md-4">
+                    <h2 className="text-center mb-4">Login</h2>
+                    <form onSubmit={handleLogin}>
+                        <div className="mb-3">
+                            <label className="form-label">Username</label>
+                            <input className="form-control" value={username} onChange={e => setUsername(e.target.value)} />
+                        </div>
+                        <div className="mb-3">
+                            <label className="form-label">Password</label>
+                            <input className="form-control" type="password" value={password} onChange={e => setPassword(e.target.value)} />
+                        </div>
+                        <button className="btn btn-primary w-100 mb-2" type="submit">Login</button>
+                        <button className="btn btn-outline-secondary w-100" type="button" onClick={() => router.push('/register')}>
+                            Belum punya akun? Register
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
     );
 }
